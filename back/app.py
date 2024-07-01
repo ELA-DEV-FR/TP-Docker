@@ -12,7 +12,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 db_user = os.getenv('DB_USER', 'root')
 db_password = os.getenv('DB_PASSWORD', 'my-secret-pw')
 db_host = os.getenv('DB_HOST', 'mariadb-server')
-db_name = os.getenv('DB_NAME', 'guestbook')
+db_name = os.getenv('DB_NAME', 'mydatabase')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
